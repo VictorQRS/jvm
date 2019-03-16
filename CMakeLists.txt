@@ -4,6 +4,7 @@ project(jvm)
 option(BUILD_32 "Force 32-bit compilation" OFF)
 
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
 if(BUILD_32)
     # Targeting 32-bit systems
@@ -15,24 +16,24 @@ include_directories("src/include")
 
 set(SOURCES
     src/main.cpp
-    src/lib/util/reader.cpp
-    src/lib/util/converter.cpp
-    src/lib/util/commander.cpp
-    src/lib/engine/frame.cpp
-    src/lib/engine/operands.cpp
-    src/lib/engine/variables.cpp
-    src/lib/class_loader/class_loader.cpp
-    src/lib/class_loader/constant_pool.cpp
-    src/lib/class_loader/interface.cpp
-    src/lib/class_loader/attribute.cpp
-    src/lib/class_loader/method.cpp
-    src/lib/class_loader/field.cpp
-    src/lib/engine/engine.cpp
-    src/lib/engine/frames_stack.cpp
-    src/include/class_loader/code_info.hpp
-    src/include/class_loader/instruction_info.hpp
-    src/lib/class_loader/code_info.cpp
-    src/lib/class_loader/instruction_info.cpp
+    src/util/reader.cpp
+    src/util/converter.cpp
+    src/util/commander.cpp
+    src/engine/frame.cpp
+    src/engine/operands.cpp
+    src/engine/variables.cpp
+    src/class_loader/class_loader.cpp
+    src/class_loader/constant_pool.cpp
+    src/class_loader/interface.cpp
+    src/class_loader/attribute.cpp
+    src/class_loader/method.cpp
+    src/class_loader/field.cpp
+    src/engine/engine.cpp
+    src/engine/frames_stack.cpp
+    src/class_loader/code_info.hpp
+    src/class_loader/instruction_info.hpp
+    src/class_loader/code_info.cpp
+    src/class_loader/instruction_info.cpp
 )
 
 #file(GLOB SOURCES "src/*.cpp")
