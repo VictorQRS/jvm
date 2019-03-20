@@ -4,7 +4,7 @@ project(jvm)
 option(BUILD_32 "Force 32-bit compilation" OFF)
 
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
+set(CMAKE_BUILD_TYPE Debug)
 
 if(BUILD_32)
     # Targeting 32-bit systems
@@ -13,10 +13,10 @@ if(BUILD_32)
 endif(BUILD_32)
 
 include_directories("src/include")
+add_compile_options(-Wall -Wextra -Wpedantic)
 
 set(SOURCES
     src/main.cpp
-    src/util/reader.cpp
     src/util/converter.cpp
     src/util/commander.cpp
     src/engine/frame.cpp
@@ -28,6 +28,7 @@ set(SOURCES
     src/class_loader/attribute.cpp
     src/class_loader/method.cpp
     src/class_loader/field.cpp
+    src/class_loader/reader.cpp
     src/engine/engine.cpp
     src/engine/frames_stack.cpp
     src/class_loader/code_info.hpp

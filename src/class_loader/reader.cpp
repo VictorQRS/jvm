@@ -1,5 +1,5 @@
 #include "reader.hpp"
-#include "JvmException.hpp"
+#include "../util/JvmException.hpp"
 
 namespace jvm {
 

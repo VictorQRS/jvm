@@ -289,4 +289,4 @@ namespace jvm {
 		os << prefix << "Opcodes:" << std::endl;
 	}
 
-};
+}

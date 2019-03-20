@@ -2,6 +2,7 @@
 #include "engine/engine.hpp"
 #include "util/JvmException.hpp"
 #include "util/commander.hpp"
+#include "base.hpp"
 
 int main (int argc, char *argv[ ]) {
 
@@ -25,7 +26,7 @@ int main (int argc, char *argv[ ]) {
 		}
 
 	} catch (const jvm::JvmException& e) {
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 
 	return 0;

@@ -34,4 +34,4 @@ namespace jvm {
 		std::shared_ptr<InstructionInfo> getInstr(u1 &);
 	};
 
-};
+}
